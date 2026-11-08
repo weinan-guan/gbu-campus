@@ -27,6 +27,10 @@ npm start
 
 Open http://127.0.0.1:5190/ for the day tour or http://127.0.0.1:5190/night/ for the night game. Run all commands from the repository root; the root build packages both modes together. Rebuild after changing source files. The completed build works without internet access. Fonts, geometry, materials and sound generation are local.
 
+### First local check (optional)
+
+After `npm start`, open the day URL and check for **Take the guided visit** and **Explore on foot**. Open the night URL and check for **Begin the night** and **Watch demo**. Local URLs do not use the production-only `/world/` prefix. If the server reports a missing build, run `npm run build` from the repository root before starting it again. Seeing both title screens checks that the routes load; it does not prove that movement, sound, or gameplay works. Test those separately before reporting them as verified.
+
 On Windows, after the first build you can also double-click **Start-GBU-Campus.cmd**. It uses the existing Codex Node runtime when available, otherwise Node from PATH, and opens the game.
 
 **5190 is the default local port.** Both `npm start` and the Windows launcher respect the `PORT` environment variable. To choose another port, set it before starting. For example, in PowerShell:
